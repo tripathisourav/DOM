@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #111;
+}
+
+
+/* 
+#box{
+    height: 200px;
+    width: 200px;
+} */
+
+
+h1{
+    font-size: 100px;
+    text-align: center;
+}
+
+
+#btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button{
+    background-color: crimson;
+    padding: 30px 80px;
+    margin-top: 70px;
+    border-radius: 15px;
+    font-size: 30px;
+}
