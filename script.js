@@ -1,109 +1,130 @@
-// var a = Math.random();   //method in js that gives random values in range 0 to 1
-
-// console.log(a);
-
-
-// var a = Math.random()*10;  // 0 se 10 ke beech mein
-// console.log(a);
-
-// var b = Math.floor(a);
-
-// console.log(b);
+// create a element
+// appending a child
 
 
+
+// var h1 = document.createElement('h1');
+// console.log(h1);
 
 
 // var btn = document.querySelector('button');
-// var box = document.querySelector("#box");
-
 
 // btn.addEventListener('click', function(){
-//     var c1 = Math.floor(Math.random()*256);   // floor ki wajah se value 255 se jyada aayegi hi nhi
-//     var c2 = Math.floor(Math.random()*256);
-//     var c3 = Math.floor(Math.random()*256);
 
-//     box.style.backgroundColor = `rgb(${c1}, ${c2}, ${c3})`
+//     var h1 = document.createElement('h1');
+//     h1.innerHTML = "hello from js"
+
+//     console.log(h1);
 // })
 
 
 
 
 
-var arr = [
-    {
-        team: 'CSK',
-        primary: 'yellow',
-        secondary: 'blue',
-        fullname: 'Chennai Super Kings',
-        trophies: 5,
-        captian: 'MSD',
-        img: 'https://i.pinimg.com/736x/4e/e7/ac/4ee7ac144c048d64edcb30d3129a895f.jpg'
-    },
-    {
-        team: 'RCB',
-        primary: 'red',
-        secondary: 'black',
-        fullname: 'Royal Challengers Bengaluru',
-        trophies: 1,
-        captian: 'Rajat Patidar',
-        img: 'https://i.pinimg.com/736x/54/96/c3/5496c328d02c848b352190a0eee94dc1.jpg'
-    },
-    {
-        team: 'MI',
-        primary: 'blue',
-        secondary: 'grey',
-        fullname: 'Mumbai Indians',
-        trophies: 5,
-        captian: 'Hardik Pandya',
-        img: 'https://i.pinimg.com/1200x/e8/87/a8/e887a81959a66337b7ccc7835c38470e.jpg'
-    },
-    {
-        team: 'PBKS',
-        primary: 'red',
-        secondary: 'darkBlue',
-        fullname: 'Punjab Kings',
-        trophies: 0,
-        captian: 'Shreyas Iyer',
-        img: 'https://i.pinimg.com/736x/29/a3/22/29a3221c17e0e067e72034fa4f7b5e12.jpg'
-    },
-    {
-        team: 'KKR',
-        primary: 'purple',
-        secondary: 'gold',
-        fullname: 'Kolkata Knight Riders',
-        trophies: 3,
-        captian: 'Ajinkya Rahane',
-        img: 'https://i.pinimg.com/736x/50/74/90/5074903bf6ee5d5e643f19de6efe1568.jpg'
-    }
-]
+// var h1 = document.createElement('h1');
+
+// h1.innerHTML = "Hello from JS"
+
+// var main = document.querySelector('main');
+
+// main.appendChild(h1);
 
 
 
-var btn = document.querySelector('button');
-var box = document.querySelector('#box');
+
+
+// var btn = document.createElement('button')
+
+// btn.innerHTML = 'download'
+
+// var main = document.querySelector('main')
+
+// main.appendChild(btn)
+
+
+
+
+
+
+
+
+// random boxes project
+
+// var main = document.querySelector('main');
+// var btn = document.querySelector('button');
+
+
+// btn.addEventListener('click', function(){
+//     var box = document.createElement('div');
+//     box.style.height = '50px';
+//     box.style.width = '50px';
+
+//     box.style.position = 'absolute';
+
+
+//     var c1 = Math.floor(Math.random()*256)
+//     var c2 = Math.floor(Math.random()*256)
+//     var c3 = Math.floor(Math.random()*256)
+
+//     box.style.backgroundColor = `rgb(${c1},${c2},${c3})`
+
+//     var x = Math.random()*100;
+//     var y = Math.random()*100;
+
+//     var r = Math.random()*360
+
+
+//     box.style.left = x+'%'
+//     box.style.top = y+'%'
+
+//     box.style.rotate = r+'deg'
+
+//     main.appendChild(box);
+// })
+
+
+
+
+
+
+// random lines project
+
+
+
+var arr = ['hello ji', 'juice peelo mausambi ka', 'imandari chalat ha babu', 'Bhupendra jogi', 'asla hm bhi rakhte hai pehlwan', 'sher cheetah hi kehde']
 var main = document.querySelector('main');
+var btn = document.querySelector('button');
 
 
 btn.addEventListener('click', function(){
+    var h1 = document.createElement('h1')
 
-    var win = arr[Math.floor(Math.random()*arr.length)];
+    var a = Math.floor(Math.random()*arr.length)
 
-    box.innerHTML = `<div id="top"><h1>${win.team}</h1> <h2>(${win.fullname})</h2></div>
-            <div id="down"><h2>Captian: ${win.captian}</h2> <h3>Trophies: ${win.trophies}</h3></div>`;
+    h1.innerHTML = arr[a]
 
-    main.style.backgroundColor = `${win.primary}`
-    box.style.backgroundColor = `${win.secondary}`;
+    h1.style.position = 'absolute';
 
-    box.addEventListener('dblclick', function(){
-        box.style.backgroundImage = `url(${win.img})`;
-        box.style.backgroundSize = 'cover';
-        box.style.backgroundPosition = 'center';
-        box.innerHTML = "";
 
-        setTimeout(function(){
-            box.style.backgroundImage = "none";
-            box.innerHTML = `<div id="top"><h1>${win.team}</h1> <h2>(${win.fullname})</h2></div>
-            <div id="down"><h2>Captian: ${win.captian}</h2> <h3>Trophies: ${win.trophies}</h3></div>`;
-        }, 3000);
-    })
+    // var c1 = Math.floor(Math.random()*256)
+    // var c2 = Math.floor(Math.random()*256)
+    // var c3 = Math.floor(Math.random()*256)
+
+    // box.style.backgroundColor = `rgb(${c1},${c2},${c3})`
+
+
+    var x = Math.random()*80;
+    var y = Math.random()*80;
+
+    var r = Math.random()*360
+    var scl = Math.random()*3
+
+
+    h1.style.left = x+'%'
+    h1.style.top = y+'%'
+
+    h1.style.rotate = r+'deg'
+    h1.style.scale = scl
+
+    main.appendChild(h1);
 })
