@@ -8,73 +8,59 @@ html,
 body {
     height: 100%;
     width: 100%;
-    background-color: #111;
 }
-
-
 
 main{
     height: 100%;
     width: 100%;
-    color: black;
-
+    background-color: #111;
+    padding: 22px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
 }
+
 
 .card{
-    /* height: 300px; */
-    width: 200px;
+    /* height: 350px; */
+    width: 280px;
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    position: absolute;
-}
-
-.card #im{
-    height: 180px;
-    width: 100%;
-    position: relative;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-#im img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.card h2{
     text-align: center;
-    font-size: 25px;
-    font-weight: 600;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+}
+
+.card h3{
+    font-size: 26px;
+    white-space: nowrap;
+}
+
+.card h4{
+    font-size: 18px;
+    margin-top: 10px;
+    color: crimson;
+    margin-bottom: 10px;
 }
 
 
-/* transition: property duration timing-function delay; */
-
-#im i{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 50px;
-    opacity: 0;
-    /* scale: 0; */
-
-
-
-    background-image: url(https://imgs.search.brave.com/lApH2FguirTL1_iN_DCxMJqeKkCmZaTjRWiErsPMeN0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM0/NjAzMTI4Mi92ZWN0/b3Ivc21vb3RoLWNv/bG9yLWdyYWRpZW50/LWJhY2tncm91bmQt/dmVjdG9yLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1sZ0hG/b01RYVJhbWZaVEhh/ZnZWRXpwa3Z3bFRJ/RGFzOVpaUGNyWVJ5/RlNjPQ);
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-
-    color: transparent;
-    transform: translate(-50%, -50%) scale(0) rotate(-90deg);
-    transition: all cubic-bezier(0.65, 1, 0.77, 1.44) 0.4s;
+.card p{
+    font-size: 14px;
 }
 
 
-/* refer cubic bezier for creating transitions */
+
+
+
+
+
