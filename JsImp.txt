@@ -56,3 +56,12 @@ Copy (Ctrl + C) from that element is prevented
 forEach(elem){
      elem.dataset.key -> data-key given by user
 }
+
+
+dets.code == 'keyD'  aud.play()
+
+
+
+map -> hr element se kuch nya bnane ke liye -> ek naya array
+filter -> kisi consition pe element chatne ke liye
+reduce -> pure array ko ek number mein reduce krne ke liye

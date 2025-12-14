@@ -1,102 +1,49 @@
-// var box = document.getElementById('box');
-// var body = document.body;
+// var h1 = document.querySelector('h1')  
+// console.log(h1) // sirf pehla h1 select hua
 
 
-// click, mouseenter, mousemove, mouseleave
+// var hAll = document.querySelectorAll('h1')
+// console.log(hAll);  // gives a nodelist of all h1's
+// console.log(hAll[1]);  
 
-// var main = document.querySelector('#main')
-
-// main.addEventListener('mousemove', function(dets){
-  
-//   console.log(dets); // details of every moment in mousemove
-
-// });  // the value of dets depend on the event like in this case it is mousemove   -> mouseevent
-
-// click -> pointer event
-
-// dets.x -> x axis pe mouse ki value
-// dets.y -> y axis pe mouse ki value
-
-// keypress -> keyboard event
-
-// document.addEventListener('keypress', function(e){
-//   console.log(e.key);  // e -> keyboard event
-// });
-
-// diffrence between keypress and keydown
-// keypress -> only for character keys
-// keydown -> for all keys
+// // a nodelist is quietly similar to array but doesn,t perfoem all array operations
 
 
+// hAll.forEach(function(val)
+// {
+//     console.log(val); // Hello 1 Hello 2 Hello 3
+// })
 
 
-// keydown -> keyboard event
-
-// document.addEventListener('keydown', function(e){
-//   console.log(e.key);  // e -> keyboard event
-  
-//   document.querySelector('h1').innerHTML = e.code;
-// });
-
-
-
-
-
-// Virtual Piano
-
-
-const pianoKeys = document.querySelectorAll(".piano-keys .key"),
-volumeSlider = document.querySelector(".volume-slider input"),
-keysCheckbox = document.querySelector(".keys-checkbox input");
-let allKeys = [],
-audio = new Audio(`tunes/a.wav`); // by default, audio src is "a" tune
-const playTune = (key) => {
-    audio.src = `tunes/${key}.wav`; // passing audio src based on key pressed 
-    audio.play(); // playing audio
-    const clickedKey = document.querySelector(`[data-key="${key}"]`); // getting clicked key element
-    clickedKey.classList.add("active"); // adding active class to the clicked key element
-    setTimeout(() => { // removing active class after 150 ms from the clicked key element
-        clickedKey.classList.remove("active");
-    }, 150);
-}
-pianoKeys.forEach(key => {
-    allKeys.push(key.dataset.key); // adding data-key value to the allKeys array
-    // calling playTune function with passing data-key value as an argument
-    key.addEventListener("click", () => playTune(key.dataset.key));
-});
-const handleVolume = (e) => {
-    audio.volume = e.target.value; // passing the range slider value as an audio volume
-}
-const showHideKeys = () => {
-    // toggling hide class from each key on the checkbox click
-    pianoKeys.forEach(key => key.classList.toggle("hide"));
-}
-const pressedKey = (e) => {
-    // if the pressed key is in the allKeys array, only call the playTune function
-    if(allKeys.includes(e.key)) playTune(e.key);
-}
-keysCheckbox.addEventListener("click", showHideKeys);
-volumeSlider.addEventListener("input", handleVolume);
-document.addEventListener("keydown", pressedKey);
+// hAll.map() nhi lgta
+// hAll.filter() nhi lgta
+// hAll.reduce() nhi lgta
 
 
 
 
 
 
+// var outer = document.querySelector('#outer')
+
+// console.log(outer.childNodes);  //NodeList(5) [text, div#inner1, text, div#inner2, text]  orignal length should be 2 but there are fillers at even indexes which mke length 5
+// console.log(outer.childNodes[0]);  //#text
 
 
 
 
 
+var allBtn = document.querySelectorAll('.only')
 
+allBtn.forEach(function(elem){
+    elem.childNodes[3].addEventListener('click', function(val){
+        if(elem.childNodes[3].innerHTML == 'Add Friend'){
+            elem.childNodes[3].innerHTML = 'Remove Friend'
+        }
+        else{
+            elem.childNodes[3].innerHTML = 'Add Friend'
+        }
+    })
 
-
-
-
-
-
-
-
-// hire@sheriyans.com
-// sarthaksharma@sheriyans.com
+    console.log(elem);
+})
