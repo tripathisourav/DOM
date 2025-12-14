@@ -1,63 +1,83 @@
-// var arr = [10, 'hello', 30.5, false, 50]
+// var box = document.getElementById('box');
+// var body = document.body;
 
 
-const users = [
-  {
-    fullname: "Emma Watson",
-    image: "https://i.pinimg.com/736x/dd/86/b6/dd86b635382fd8047919b6c32188b096.jpg",
-    profession: "Actor & Activist",
-    desc: "Actor and Public speaker",
-    tags: ["acting", "feminism", "public-speaking"]
-  },
-  {
-    fullname: "Elon Musk",
-    image: "https://i.pinimg.com/1200x/88/94/52/8894528940b3d7eb88a241e3c34f4e25.jpg",
-    profession: "Entrepreneur",
-    desc: "Tech Enthusiast, space startups technology and a lot more",
-    tags: ["technology", "startups", "space"]
-  },
-  {
-    fullname: "Virat Kohli",
-    image: "https://i.pinimg.com/736x/bc/1d/48/bc1d48f3c19534f4c13ffff4243e5ecc.jpg",
-    profession: "Cricketer",
-    desc: "Indian Sports Player, fitness Enthusiast",
-    tags: ["sports", "fitness", "leadership"]
-  },
-  {
-    fullname: "Marshall Mathers",
-    image: "https://i.pinimg.com/736x/cd/3e/93/cd3e93c040affd08e54a2495bd899273.jpg",
-    profession: "Singer-Songwriter",
-    desc: "Rapper Performer, One of the key faces of American Hip Hop",
-    tags: ["music", "songwriting", "performing"]
-  },
-  {
-    fullname: "Sundar Pichai",
-    image: "https://i.pinimg.com/736x/e6/14/19/e61419f4efc27179e3f932010db5d659.jpg",
-    profession: "CEO of Google",
-    desc: "Tech Enthusiast, CEO of Google IIT grad",
-    tags: ["technology", "management", "innovation"]
-  }
-];
+// click, mouseenter, mousemove, mouseleave
+
+// var main = document.querySelector('#main')
+
+// main.addEventListener('mousemove', function(dets){
+  
+//   console.log(dets); // details of every moment in mousemove
+
+// });  // the value of dets depend on the event like in this case it is mousemove   -> mouseevent
+
+// click -> pointer event
+
+// dets.x -> x axis pe mouse ki value
+// dets.y -> y axis pe mouse ki value
+
+// keypress -> keyboard event
+
+// document.addEventListener('keypress', function(e){
+//   console.log(e.key);  // e -> keyboard event
+// });
+
+// diffrence between keypress and keydown
+// keypress -> only for character keys
+// keydown -> for all keys
 
 
 
 
-var clutter = "";
+// keydown -> keyboard event
 
-users.forEach(function(val){
-    clutter += ` <div class="card">
-            <img src=${val.image} alt="">
-            <h3>${val.fullname}</h3>
-            <h4>${val.profession}</h4>
-            <p>${val.desc}</p>
-        </div>`
-})
-
-document.querySelector('main').innerHTML = clutter
+// document.addEventListener('keydown', function(e){
+//   console.log(e.key);  // e -> keyboard event
+  
+//   document.querySelector('h1').innerHTML = e.code;
+// });
 
 
 
 
+
+// Virtual Piano
+
+
+const pianoKeys = document.querySelectorAll(".piano-keys .key"),
+volumeSlider = document.querySelector(".volume-slider input"),
+keysCheckbox = document.querySelector(".keys-checkbox input");
+let allKeys = [],
+audio = new Audio(`tunes/a.wav`); // by default, audio src is "a" tune
+const playTune = (key) => {
+    audio.src = `tunes/${key}.wav`; // passing audio src based on key pressed 
+    audio.play(); // playing audio
+    const clickedKey = document.querySelector(`[data-key="${key}"]`); // getting clicked key element
+    clickedKey.classList.add("active"); // adding active class to the clicked key element
+    setTimeout(() => { // removing active class after 150 ms from the clicked key element
+        clickedKey.classList.remove("active");
+    }, 150);
+}
+pianoKeys.forEach(key => {
+    allKeys.push(key.dataset.key); // adding data-key value to the allKeys array
+    // calling playTune function with passing data-key value as an argument
+    key.addEventListener("click", () => playTune(key.dataset.key));
+});
+const handleVolume = (e) => {
+    audio.volume = e.target.value; // passing the range slider value as an audio volume
+}
+const showHideKeys = () => {
+    // toggling hide class from each key on the checkbox click
+    pianoKeys.forEach(key => key.classList.toggle("hide"));
+}
+const pressedKey = (e) => {
+    // if the pressed key is in the allKeys array, only call the playTune function
+    if(allKeys.includes(e.key)) playTune(e.key);
+}
+keysCheckbox.addEventListener("click", showHideKeys);
+volumeSlider.addEventListener("input", handleVolume);
+document.addEventListener("keydown", pressedKey);
 
 
 

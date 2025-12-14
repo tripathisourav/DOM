@@ -1,0 +1,58 @@
+mix-blend-mode: difference;   upar kuch bhi chalega uske background mein ye chalega  
+position: relative;
+z-index: 3;
+
+ab hm h1 ke neeche kuch bhi chalayenga h1 mein uski jhalak dikhegi
+
+
+
+var box = document.createElement('div')   // div box created
+
+main.appendChild(box);   //appends the child to main tag
+
+btn.addEventListener('click', function(){
+
+     btn.style.pointerEvents = 'none'
+     ab sirf ek baar btn pe click hoga dubara nhi
+});
+
+
+
+//IMP
+
+document.querySelectorAll('.black-key').forEach(key => {
+  key.addEventListener('click', function (e) {
+    e.stopPropagation();   // prevents white-key click
+    console.log('Black key clicked');
+  });
+});
+
+document.querySelectorAll('.white-key').forEach(key => {
+  key.addEventListener('click', function () {
+    console.log('White key clicked');
+  });
+});
+
+
+background: url(image.jpg) no-repeat center/cover #000;  many properties of background in one line
+
+
+margin top right bottom left  margin: 10px 20px 30px 40px;
+margin top left&right bottom  margin: 10px 20px 30px;
+
+
+div {
+  user-select: none;
+}
+Effect:
+Text cannot be selected
+
+Drag-selection is disabled
+
+Double-click text selection is disabled
+
+Copy (Ctrl + C) from that element is prevented
+
+forEach(elem){
+     elem.dataset.key -> data-key given by user
+}

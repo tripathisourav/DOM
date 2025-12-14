@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+
+
+
+#card{
+    border-radius: 10px;
+    height: 450px;
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#card img{
+    object-fit: cover;
+    object-position: center;
+    height: 55%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#card h1{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+
+#card h5{
+    font-size: 25px;
+    columns: red;
+    margin: 20px;
+}
+
+
+#card button{
+    cursor: pointer;   
+}
+
+#btn{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#btn #add{
+    background-color: cadetblue;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+#btn #Remove{
+    background-color: #dadada;
+    color: #111;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+} */
+
+
+
+
+
+
+/* 2 */
+
+
+/* body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkgray;
+}
+
+#container{
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#container i{
+    color: #fff;
+    font-size: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)  scale(0);
+    opacity: 0.8;
+    transition: transform ease 0.1s;
+} */
+
+
+
+
+
+/* 3 */
+
+/* #main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: none;
+}
+
+.cursor{
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    position: absolute;
+    transition: all linear 0.1s;
+}
+
+
+h1{
+    font-size: 9vw;
+    font-weight: 900;
+} */
+
+
+
+
+
+/* 4 */
+
+
+/* #main{
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    position: relative;
+    color: white;
+}
+
+.elem{
+    height: 120px;
+    width: 100%;
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.elem h1{
+    position: relative;
+    z-index: 3;
+    mix-blend-mode: difference;
+}
+
+
+.elem h1{
+    font-size: 6vw;
+}
+
+.elem img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    transition: all linear 0.3s;
+} */
+
+
+
+/* 5 */
+
+
+/* body{
+    background-color: rgb(0, 179, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#card{
+    height: 460px;
+    width: 280px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid black;
+    position: relative;
+}
+
+
+
+#storiy{
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid darkblue;
+    padding: 20px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 5px;
+}
+
+#storiy::-webkit-scrollbar{
+    display: none;
+}
+
+#storiy .story{
+    flex-shrink: 0;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid red;
+    overflow: hidden;
+}
+
+.story img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+#full-screen{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    position: absolute;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Creating element with a click button */
+
+
+
+ 
+
+/* 
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+
+    overflow: hidden;    
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+button{
+    padding: 10px 20px;
+    font-weight: 600;
+    background-color: crimson;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    position: relative;
+    z-index: 9;
+}
+
+button:active{
+    scale: 0.95;
+}
+
+h1{
+    white-space: nowrap;
+} */
+
+
+
+
+
+
+
+
+/* main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+h1{
+    color: white;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: crimson;
+    font-size: 16px;
+    color: white;
+    border: none;
+} */
+
+
+
+
+
+
+
+
+
+
+/* Fourth commit */
+
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+
+.card .top{
+    width: 100%;
+    height: 20px;
+    border-radius: 15px;
+    background-color: rgb(197, 196, 196);
+}
+
+.card .top .inner{
+    height: 100%;
+    width: 0%;
+    border-radius: 50px;
+    background-color: green;
+}
+
+.card .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+
+.card .bottom button{
+    padding: 12px 25px;
+    background-color: green;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.bottom h2{
+    font-size: 60px;
+}
+
+.card p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card p span{
+    font-weight: 600;
+    color: royalblue;
+}
+
+.bottom button:active{
+    scale: 0.95;
+}
