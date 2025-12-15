@@ -65,3 +65,21 @@ dets.code == 'keyD'  aud.play()
 map -> hr element se kuch nya bnane ke liye -> ek naya array
 filter -> kisi consition pe element chatne ke liye
 reduce -> pure array ko ek number mein reduce krne ke liye
+
+forEach doesn't return anything but map, filter, reduce does
+
+map-> transformation  forEach -> iteration
+
+
+
+
+document.querySelectorAll('h1') gives node list of all h1's
+
+
+
+<h4 class="like-icon icon">${e.isLiked ? '<i class="ri-heart-3-fill love"></i>':'<i class="ri-heart-3-line"></i>'}</h4>
+
+<video autoplay loop muted class="main-img" src=${e.video}></video>
+
+
+dets.target.className -> gives class name of selected element
